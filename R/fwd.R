@@ -589,7 +589,7 @@ setMethod("fwd", signature(object="FLStock", fishery="missing",
     if(length(yrs) > 0 & !is.null(maxF) & !iseas) {
       
       # MERGE controls
-      maxFc <- fwdControl(year=yrs, quant="fbar", min=0, max=maxF, biol=1)
+      maxFc <- fwdControl(year=yrs, quant="fbar", min=0, max=maxF, biol=1, season=control$season)
      
       target <- rbind(control@target, maxFc@target)
 
